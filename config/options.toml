@@ -1,0 +1,10 @@
+[cut_options]
+use_exact_rounded_capacity_cuts = false
+use_learned_rounded_capacity_cuts = true
+use_learned_framed_capacity_cuts = true
+use_rounded_capacity_cuts = false
+use_framed_capacity_cuts = false
+
+[search_options]
+use_pi_greedy = true
+use_graphchip_rci = true

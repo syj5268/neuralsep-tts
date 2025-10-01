@@ -1,0 +1,27 @@
+model:
+  node_dim: 2
+  edge_dim: 1
+  latent_dim: 128
+  n_gn_layer: 5
+  policy_mlp_params: {}
+train:
+  seed: 4321
+  test_size: 1000
+  batch_size: 256
+  data_dir: "./data/rci_pyg_training.pt"
+  n_epochs: 100
+  max_iter: 50
+  contraction_ratio: 0.75
+  num_clusters: 3
+  loss_fn: BCELoss
+  positive_weight: True
+  save_every: 100
+  eval_every: 100
+  use_wandb: True 
+  device: cuda:0
+opt:
+  lr: 0.001
+  scheduler: cosine
+  T_0: 32
+  milestones: [25, 50, 75] 
+  weight_decay: 0.00001 #0
